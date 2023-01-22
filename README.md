@@ -1,16 +1,23 @@
-# get_help
+<div align="center">
+  <h1>CUET Get Help</h1>
+  
+ </div
+ 
 
-A new Flutter project.
+ 
+ 
+ <div align="center">
+  <p>
+    <img src="https://user-images.githubusercontent.com/38901581/213903262-5b4bffbe-1f37-4aa5-928b-d65b3bdb2c22.svg" align="center" alt="Logo" width="200px" height="auto" />
+  </p>
+  <p>
+    A platform for students of <a href="https://www.cuet.ac.bd/">CUET</a> to express concern and recieve help
+  </p>
+</div>
+<div>
 
-## Getting Started
+ ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
+ ![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
+ </div>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<!-- ![Logo](https://user-images.githubusercontent.com/38901581/213903262-5b4bffbe-1f37-4aa5-928b-d65b3bdb2c22.svg) -->
