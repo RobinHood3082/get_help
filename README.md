@@ -30,7 +30,14 @@ Flutter provides three types of tests:
 
 We aim to achieve higher test coverage of Unit tests and Widget tests.
 
-![flutter-tests](https://files.koenig.kodeco.com/uploads/2020/04/testing-pyramid.001.jpeg)
+<div align="center">
+  <p>
+    <img src="https://files.koenig.kodeco.com/uploads/2020/04/testing-pyramid.001.jpeg" align="center" alt="tests" width="400px" height="auto" />
+  </p>
+  
+</div>
+
+<!-- ![flutter-tests](https://files.koenig.kodeco.com/uploads/2020/04/testing-pyramid.001.jpeg) -->
 
 ## Unit tests
 
@@ -39,6 +46,17 @@ Unit tests are handy for verifying the behavior of a single function, method, or
 Unit tests will be written in `/test/unit` directory.
 
 Every units will be treated as `sut` (system under test) and will be tested in a separate file.
+
+
+<div align="center">
+  <p>
+    <img src="https://user-images.githubusercontent.com/38901581/215708724-3fd7033b-3afa-4875-888e-926b1883482a.png" align="center" alt="tests" width="500px" height="auto" />
+  </p>
+  
+</div>
+
+<!-- ![image](https://user-images.githubusercontent.com/38901581/215708724-3fd7033b-3afa-4875-888e-926b1883482a.png) -->
+
 
 - [Mocktail - Mock library](https://pub.dev/packages/mocktail)
 
