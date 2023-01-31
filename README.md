@@ -18,7 +18,47 @@
   
 </div>
 
-## Getting Started
+# TDD (Test Driven Developemt)
+
+Our goal is to develop the app using TDD (Test Driven Development) approach. We'll write unit tests that fails first and then write the code to make the test pass.
+
+Flutter provides three types of tests:
+
+- [Unit tests](https://docs.flutter.dev/cookbook/testing/unit)
+- [Widget tests](https://docs.flutter.dev/cookbook/testing/widget)
+- [Integration tests](https://docs.flutter.dev/cookbook/testing/integration)
+
+We aim to achieve higher test coverage of Unit tests and Widget tests.
+
+![flutter-tests](https://files.koenig.kodeco.com/uploads/2020/04/testing-pyramid.001.jpeg)
+
+## Unit tests
+
+Unit tests are handy for verifying the behavior of a single function, method, or class.
+
+Unit tests will be written in `/test/unit` directory.
+
+Every units will be treated as `sut` (system under test) and will be tested in a separate file.
+
+- [Mocktail - Mock library](https://pub.dev/packages/mocktail)
+
+## Widget tests
+
+Widget tests are useful for verifying the behavior of a widget or a screen. Our goal will be to ensure if an widget properly renders in the UI.
+
+Widget tests will be written in `/test/widget` directory.
+
+Every widget will be treated as `sut` (system under test) and will be tested in a separate file.
+
+- [Mocktail - Mock library](https://pub.dev/packages/mocktail)
+
+## Integration tests
+
+Integration tests are useful for verifying that a group of widgets work together as expected.
+
+Integration tests are more costly and complex than unit tests and widget tests, so we'll try write them only when necessary.
+
+## Getting Started w/ development
 
 - Clone the repository `git clone git@github.com:RobinHood3082/get_help.git`
 - cd into the direcotry `cd get_help`
