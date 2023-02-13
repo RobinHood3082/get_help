@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "408920543157",
+    "project_id": "cuet-get-help",
+    "storage_bucket": "cuet-get-help.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408920543157:android:a4a81b8fd553246966d3fc",
+        "android_client_info": {
+          "package_name": "com.example.get_help"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408920543157-osct0das6hgldanr8ahrdbngp3c6bnvc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.get_help",
+            "certificate_hash": "70aa7d09efcfc3219a629a54a16c711f359181af"
+          }
+        },
+        {
+          "client_id": "408920543157-edun6qsjs73ohn37u1tmakrl8vtpbi24.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGBiT-BtLTC-e6NbYmHNMsEKP4pyXajEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "408920543157-edun6qsjs73ohn37u1tmakrl8vtpbi24.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "408920543157-7hen6pms5no3vb68nmki5p4vf74mhtv9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.getHelp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
