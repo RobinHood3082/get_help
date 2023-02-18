@@ -2,15 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get_help/core/routes/router.dart';
 import 'package:get_help/presentation/auth/auth_provider.dart';
+// import 'package:flutter_native_splash/flutter_native_splash.dart';
+
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(const MyApp());
+  // FlutterNativeSplash.remove();
 }
 
 class MyApp extends StatelessWidget {
@@ -30,6 +35,11 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           // is not restarted.
           primarySwatch: Colors.blueGrey,
+          textTheme: const TextTheme(
+              bodyText1: TextStyle(
+            color: Colors.black,
+            fontSize: 20.0,
+          )),
           outlinedButtonTheme: OutlinedButtonThemeData(
             style: ButtonStyle(
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(

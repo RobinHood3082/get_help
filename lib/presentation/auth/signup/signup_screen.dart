@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get_help/presentation/auth/auth_provider.dart';
 import 'package:get_help/presentation/widgets/scaffold_wrapper.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 class SigninScreen extends StatelessWidget {
@@ -29,10 +30,12 @@ class SigninScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 80),
                   OutlinedButton(
+                    key: const ValueKey('signin'),
                     onPressed: () {
                       final provider =
                           Provider.of<AuthProvider>(context, listen: false);
                       provider.googleLogin();
+                      // context.go('/s-dashboard');
                     },
                     // style: ElevatedButton.styleFrom(
                     //   backgroundColor: const Color(0xFF261C2C),

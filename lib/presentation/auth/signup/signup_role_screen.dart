@@ -20,6 +20,7 @@ class SignupRole extends StatelessWidget {
                 Image.asset('assets/get_help.png'),
                 const SizedBox(height: 80),
                 OutlinedButton(
+                  key: ValueKey('teacher'),
                   onPressed: () => context.go('/signin'),
                   child: Row(
                     children: const [
