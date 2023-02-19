@@ -5,16 +5,17 @@ import 'package:provider/provider.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);
-  // static const padding = EdgeInsets.symmetric(horizontal: 20);
 
   @override
   Widget build(BuildContext context) {
-    final notifier = Provider.of<AuthProvider>(context);
+    final notifier = Provider.of<AuthProvider>(context, listen: false);
     final user = FirebaseAuth.instance.currentUser;
-    final username = user?.displayName;
-    final name = username!.substring(0, username.length - 8);
-    final id = user?.email!.substring(1, 8);
-    final photoURL = user?.photoURL;
+    final displayName = user?.displayName;
+    final String name = displayName?.substring(0, displayName.length - 8) ?? '';
+    final String studentID = user?.email!.substring(1, 8) ?? '';
+    final String photoURL = user?.photoURL ??
+        'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png';
+
     return Drawer(
       child: Material(
         // color: ColorResources.DRAWER_BG,
@@ -24,31 +25,14 @@ class CustomDrawer extends StatelessWidget {
             const SizedBox(height: 20),
             buildHeader(
               name: name,
-              email: id,
-              imgURL: photoURL,
+              id: studentID,
+              photoURL: photoURL,
             ),
             const SizedBox(height: 24),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 10),
               child: Divider(),
             ),
-
-            // buildMenuItem(
-            //   text: 'Profile',
-            //   icon: Icons.account_circle,
-            //   onClicked: () {
-            //     Navigator.pushNamed(context, '/profile');
-            //   },
-            // ),
-            // buildMenuItem(
-            //   text: 'My posted items',
-            //   icon: Icons.format_list_bulleted,
-            //   // onClicked: () => Navigator.pushNamed(context, '/'),
-            //   onClicked: () {
-            //     Navigator.pop(context);
-            //     Navigator.pushNamed(context, '/my-items', arguments: user);
-            //   },
-            // ),
             buildMenuItem(
               text: 'Log Out',
               icon: Icons.logout_rounded,
@@ -79,26 +63,18 @@ class CustomDrawer extends StatelessWidget {
   }
 
   Widget buildHeader({
-    required String? imgURL,
-    required String? name,
-    required String? email,
+    required String photoURL,
+    required String name,
+    required String id,
   }) {
     return InkWell(
       child: Container(
         padding: const EdgeInsets.fromLTRB(10, 10, 0, 0),
         child: Row(
           children: [
-            // Image.network(
-            //   imgURL!,
-            //   width: 10,
-            //   height: 10,
-            // ),
-            // Expanded(
-            //     child: CachedNetworkImage(
-            //         imageUrl: imgURL!, width: 60, height: 60)),
             CircleAvatar(
               radius: 30,
-              backgroundImage: NetworkImage(imgURL!),
+              backgroundImage: NetworkImage(photoURL),
               backgroundColor: Colors.transparent,
             ),
             const SizedBox(width: 20),
@@ -106,11 +82,11 @@ class CustomDrawer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  name!,
+                  name,
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  email!,
+                  id,
                   style: const TextStyle(fontSize: 12),
                 ),
               ],

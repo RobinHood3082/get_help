@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get_help/core/routes/router.dart';
 import 'package:get_help/presentation/auth/auth_provider.dart';
+import 'package:get_help/presentation/student/counseling/counseling_provider.dart';
 // import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'package:provider/provider.dart';
@@ -27,6 +28,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider<AuthProvider>(
           create: (_) => AuthProvider(),
+        ),
+        ChangeNotifierProvider<StudentCounselingProvider>(
+          create: (_) => StudentCounselingProvider(),
         ),
       ],
       child: MaterialApp.router(
